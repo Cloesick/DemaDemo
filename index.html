@@ -226,26 +226,33 @@
                             </div>
                         </div>
                     </div>
-                    <div class="py-16 px-6 sm:px-16 lg:px-8 h-full">
-                        <div class="bg-white rounded-lg shadow-lg h-full w-full overflow-hidden">
-                            <!--
-                            -- HOW TO USE THIS GOOGLE FORM --
-                            1. Create a new Google Form at https://forms.new
-                            2. Click the "Send" button in the top right.
-                            3. Go to the "<>" (Embed HTML) tab.
-                            4. Copy the entire 'src="..."' attribute value from the iframe tag.
-                            5. Replace the placeholder 'src' value in the iframe below with the one you copied.
-                            -->
-                            <iframe 
-                                src="https://docs.google.com/forms/d/e/1FAIpQLSc0BV20KDC1s-B-oIN3yd6MSXC-VwnxDXF2t6zx2yFnjZWQDA/viewform?embedded=true" 
-                                width="100%" 
-                                height="100%" 
-                                frameborder="0" 
-                                marginheight="0" 
-                                marginwidth="0"
-                                class="min-h-[580px]">
-                                Loading…
-                            </iframe>
+                    <div class="pt-10 pb-12 px-6 sm:px-16 lg:py-16">
+                        <div class="bg-white p-8 rounded-lg shadow-lg h-full">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6" id="form-title">Send us a message</h3>
+                            <form id="contact-form" class="space-y-6">
+                                <div>
+                                    <label for="name" class="sr-only">Name</label>
+                                    <input type="text" name="name" id="name" autocomplete="name" required class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md" placeholder="Full name">
+                                </div>
+                                <div>
+                                    <label for="email" class="sr-only">Email</label>
+                                    <input type="email" name="email" id="email" autocomplete="email" required class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md" placeholder="Email address">
+                                </div>
+                                <div>
+                                    <label for="phone" class="sr-only">Phone</label>
+                                    <input type="text" name="phone" id="phone" autocomplete="tel" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md" placeholder="Phone number">
+                                </div>
+                                <div>
+                                    <label for="message" class="sr-only">Message</label>
+                                    <textarea id="message" name="message" rows="4" required class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border border-gray-300 rounded-md" placeholder="What is your question?"></textarea>
+                                </div>
+                                <div>
+                                    <button type="submit" id="form-button" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50">
+                                        Confirm
+                                    </button>
+                                </div>
+                                <div id="form-status" class="text-center text-sm font-medium"></div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -269,6 +276,9 @@
         // --- DOM ELEMENTS ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+        const formButton = document.getElementById('form-button');
 
         // --- TRANSLATIONS ---
         const translations = {
@@ -284,7 +294,9 @@
                 "service-irrigation-title": "24/7 Irrigation Service", "service-irrigation-text": "During the irrigation season, our technicians are available around the clock for machine breakdowns and support.",
                 "contact-title1": "Ready to get started?", "contact-title2": "Contact our specialists today.", "contact-subtitle": "Our team is ready to provide technical information and help you find the right parts for your needs.",
                 "hours-title": "Opening Hours", "hours-mf": "Mon - Fri: 07:00 - 12:00 & 12:45 - 18:00", "hours-sat": "Saturday: 08:00 - 12:00", "hours-sun": "Sunday: Closed",
-                "footer-copyright": "&copy; 2025 DEMA Industrial. All Rights Reserved.",
+                "form-title": "Send us a message", "form-button": "Confirm", "footer-copyright": "&copy; 2025 DEMA Industrial. All Rights Reserved.",
+                "placeholder-name": "Full name", "placeholder-email": "Email address", "placeholder-phone": "Phone number", "placeholder-message": "What is your question?",
+                "form-sending": `Sending...`, "form-success": "Message sent successfully!", "form-error": "Failed to send message. Please try again.",
             },
             fr: {
                 "nav-products": "Produits", "nav-news": "Actualités & Promotions", "nav-about": "À Propos", "nav-contact": "Contact",
@@ -298,7 +310,9 @@
                 "service-irrigation-title": "Service d'Irrigation 24/7", "service-irrigation-text": "Pendant la saison d'irrigation, nos techniciens sont disponibles 24h/24 pour les pannes de machines et l'assistance.",
                 "contact-title1": "Prêt à commencer ?", "contact-title2": "Contactez nos spécialistes dès aujourd'hui.", "contact-subtitle": "Notre équipe est prête à fournir des informations techniques et à vous aider à trouver les bonnes pièces pour vos besoins.",
                 "hours-title": "Heures d'Ouverture", "hours-mf": "Lun - Ven: 07:00 - 12:00 & 12:45 - 18:00", "hours-sat": "Samedi: 08:00 - 12:00", "hours-sun": "Dimanche: Fermé",
-                "footer-copyright": "&copy; 2025 DEMA Industrial. Tous droits réservés.",
+                "form-title": "Envoyez-nous un message", "form-button": "Confirmer", "footer-copyright": "&copy; 2025 DEMA Industrial. Tous droits réservés.",
+                "placeholder-name": "Nom complet", "placeholder-email": "Adresse e-mail", "placeholder-phone": "Numéro de téléphone", "placeholder-message": "Quelle est votre question ?",
+                "form-sending": `Envoi en cours...`, "form-success": "Message envoyé avec succès !", "form-error": "Échec de l'envoi. Veuillez réessayer.",
             },
             nl: {
                 "nav-products": "Producten", "nav-news": "Nieuws & Promoties", "nav-about": "Over Ons", "nav-contact": "Contact",
@@ -312,7 +326,9 @@
                 "service-irrigation-title": "24/7 Irrigatieservice", "service-irrigation-text": "Tijdens het irrigatieseizoen zijn onze technici de klok rond beschikbaar voor machinestoringen en ondersteuning.",
                 "contact-title1": "Klaar om te beginnen?", "contact-title2": "Neem vandaag nog contact op met onze specialisten.", "contact-subtitle": "Ons team staat klaar om technische informatie te verstrekken en u te helpen de juiste onderdelen voor uw behoeften te vinden.",
                 "hours-title": "Openingstijden", "hours-mf": "Ma - Vr: 07:00 - 12:00 & 12:45 - 18:00", "hours-sat": "Zaterdag: 08:00 - 12:00", "hours-sun": "Zondag: Gesloten",
-                "footer-copyright": "&copy; 2025 DEMA Industrial. Alle rechten voorbehouden.",
+                "form-title": "Stuur ons een bericht", "form-button": "Bevestigen", "footer-copyright": "&copy; 2025 DEMA Industrial. Alle rechten voorbehouden.",
+                "placeholder-name": "Volledige naam", "placeholder-email": "E-mailadres", "placeholder-phone": "Telefoonnummer", "placeholder-message": "Wat is uw vraag?",
+                "form-sending": `Verzenden...`, "form-success": "Bericht succesvol verzonden!", "form-error": "Verzenden mislukt. Probeer opnieuw.",
             }
         };
 
@@ -322,7 +338,15 @@
             for (const id in translations[lang]) {
                 const element = document.getElementById(id);
                 if (element) {
-                    element.innerHTML = translations[lang][id];
+                    if (id.startsWith('placeholder-')) {
+                        const inputId = id.replace('placeholder-', '');
+                        const inputElement = document.getElementById(inputId);
+                        if (inputElement) {
+                            inputElement.placeholder = translations[lang][id];
+                        }
+                    } else {
+                        element.innerHTML = translations[lang][id];
+                    }
                 }
             }
             
@@ -342,6 +366,56 @@
             btn.addEventListener('click', (event) => {
                 changeLanguage(event.target.getAttribute('data-lang'));
             });
+        });
+
+        contactForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            // IMPORTANT: Replace this with your actual webhook URL from make.com
+            const webhookUrl = 'https://hook.eu1.make.com/your-unique-webhook-id'; 
+
+            const formData = new FormData(contactForm);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                message: formData.get('message'),
+            };
+
+            const originalButtonText = formButton.innerHTML;
+            formButton.disabled = true;
+            formButton.innerHTML = `
+                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                ${getTranslation('form-sending')}
+            `;
+            formStatus.textContent = '';
+            formStatus.classList.remove('text-green-600', 'text-red-600');
+
+            try {
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data),
+                });
+
+                if (response.ok) {
+                    formStatus.textContent = getTranslation('form-success');
+                    formStatus.classList.add('text-green-600');
+                    contactForm.reset();
+                } else {
+                    throw new Error(`Server responded with status: ${response.status}`);
+                }
+            } catch (error) {
+                console.error('Submission error:', error);
+                formStatus.textContent = getTranslation('form-error');
+                formStatus.classList.add('text-red-600');
+            } finally {
+                formButton.disabled = false;
+                formButton.innerHTML = originalButtonText;
+            }
         });
         
         // --- INITIALIZATION ---
