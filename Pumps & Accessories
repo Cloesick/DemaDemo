@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pumps & Accessories - Dema Industrial Supply</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* CHANGE THIS: Update background image to be relevant to the category */
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x800/003366/FFFFFF?text=Pumps+%26+Accessories');
+            background-size: cover;
+            background-position: center;
+        }
+        .category-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .category-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+        .lang-btn.active { background-color: #DBEAFE; color: #1E40AF; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-3xl font-bold text-black">
+                        DEMA
+                    </a>
+                </div>
+                <div class="hidden lg:flex items-center space-x-6 text-gray-600 font-medium">
+                    <a href="index.html#products" class="hover:text-blue-600" id="nav-products">Products</a>
+                    <a href="#" class="hover:text-blue-600" id="nav-news">News & Promotions</a>
+                    <a href="#" class="hover:text-blue-600" id="nav-about">About Us</a>
+                    <a href="index.html#contact" class="hover:text-blue-600" id="nav-contact">Contact</a>
+                </div>
+                <div class="flex items-center">
+                     <div id="lang-switcher-desktop" class="hidden sm:flex items-center space-x-2 text-sm">
+                        <button data-lang="en" class="lang-btn px-3 py-1 rounded-md">EN</button>
+                        <button data-lang="fr" class="lang-btn px-3 py-1 rounded-md hover:bg-gray-200">FR</button>
+                        <button data-lang="nl" class="lang-btn px-3 py-1 rounded-md hover:bg-gray-200">NL</button>
+                    </div>
+                    <button id="mobile-menu-button" class="lg:hidden ml-4 p-2 rounded-md text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden lg:hidden px-4 pt-2 pb-4 space-y-2 bg-white border-t">
+            <a href="index.html#products" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100" id="mobile-nav-products">Products</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100" id="mobile-nav-news">News & Promotions</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100" id="mobile-nav-about">About Us</a>
+            <a href="index.html#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100" id="mobile-nav-contact">Contact</a>
+             <div id="lang-switcher-mobile" class="flex items-center space-x-2 text-sm pt-4 border-t">
+                <button data-lang="en" class="lang-btn px-3 py-1 rounded-md">EN</button>
+                <button data-lang="fr" class="lang-btn px-3 py-1 rounded-md hover:bg-gray-200">FR</button>
+                <button data-lang="nl" class="lang-btn px-3 py-1 rounded-md hover:bg-gray-200">NL</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-bg text-white">
+            <div class="bg-black bg-opacity-50">
+                <div class="container mx-auto px-4 lg:px-6 py-20 md:py-28 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4" id="hero-title">Pumps & Accessories</h1>
+                    <p class="text-lg md:text-xl max-w-3xl mx-auto" id="hero-subtitle">Reliable and efficient pumping solutions for every application.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="category-products" class="py-16 bg-white">
+            <div class="container mx-auto px-4 lg:px-6">
+                <nav class="text-sm mb-8" aria-label="Breadcrumb">
+                    <ol class="list-none p-0 inline-flex">
+                        <li class="flex items-center">
+                            <a href="index.html#products" class="text-blue-600 hover:underline">Products</a>
+                            <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
+                        </li>
+                        <li>
+                            <span class="text-gray-500">Pumps & Accessories</span>
+                        </li>
+                    </ol>
+                </nav>
+
+                <h2 class="text-3xl font-bold text-gray-800 mb-4" id="products-title">Our Pumps & Accessories</h2>
+                <p class="text-gray-600 mb-12 max-w-3xl" id="products-subtitle">We offer a comprehensive range of pumps, including centrifugal, submersible, and diaphragm pumps, along with all necessary accessories, spare parts, and control systems to ensure your operations run smoothly.</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <div class="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                       <img src="https://placehold.co/400x300/E0E0E0/333333?text=Submersible+Pump" alt="Submersible Pump" class="w-full h-48 object-cover">
+                       <div class="p-4 flex flex-col flex-grow">
+                           <h3 class="font-semibold text-lg text-gray-800">Submersible Pump</h3>
+                           <p class="text-gray-600 mt-2 text-sm flex-grow">Ideal for drainage, sewage, and well applications. High durability and performance.</p>
+                           <a href="#" class="inline-block mt-4 bg-gray-200 text-gray-800 text-center px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-300">Learn More</a>
+                       </div>
+                    </div>
+                    
+                    <div class="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                       <img src="https://placehold.co/400x300/E0E0E0/333333?text=Centrifugal+Pump" alt="Centrifugal Pump" class="w-full h-48 object-cover">
+                       <div class="p-4 flex flex-col flex-grow">
+                           <h3 class="font-semibold text-lg text-gray-800">Centrifugal Pump</h3>
+                           <p class="text-gray-600 mt-2 text-sm flex-grow">Versatile pumps for water transfer, circulation, and pressure boosting in industrial settings.</p>
+                           <a href="#" class="inline-block mt-4 bg-gray-200 text-gray-800 text-center px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-300">Learn More</a>
+                       </div>
+                    </div>
+
+                    <div class="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                       <img src="https://placehold.co/400x300/E0E0E0/333333?text=Control+Panel" alt="Pump Control Panel" class="w-full h-48 object-cover">
+                       <div class="p-4 flex flex-col flex-grow">
+                           <h3 class="font-semibold text-lg text-gray-800">Pump Control Panel</h3>
+                           <p class="text-gray-600 mt-2 text-sm flex-grow">Automate and protect your pumping systems with our advanced control panels.</p>
+                           <a href="#" class="inline-block mt-4 bg-gray-200 text-gray-800 text-center px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-300">Learn More</a>
+                       </div>
+                    </div>
+
+                    <div class="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                       <img src="https://placehold.co/400x300/E0E0E0/333333?text=Pressure+Switch" alt="Pressure Switch" class="w-full h-48 object-cover">
+                       <div class="p-4 flex flex-col flex-grow">
+                           <h3 class="font-semibold text-lg text-gray-800">Pressure Switch</h3>
+                           <p class="text-gray-600 mt-2 text-sm flex-grow">Essential accessory for automatic pump operation based on system pressure.</p>
+                           <a href="#" class="inline-block mt-4 bg-gray-200 text-gray-800 text-center px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-300">Learn More</a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-100">
+             </section>
+
+        <section id="contact" class="py-16 bg-white">
+             </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white">
+        </footer>
+
+    <script>
+        // Copy the entire script tag content from index.html
+        // It handles the mobile menu, language switching, and the contact form
+    </script>
+</body>
+</html>
