@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Hoses - Dema Industrial Supply</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x800/003366/FFFFFF?text=Industrial+Hoses');
+            background-size: cover;
+            background-position: center;
+        }
+        .category-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .category-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+        .lang-btn.active { background-color: #DBEAFE; color: #1E40AF; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        </header>
+
+    <main>
+        <section class="hero-bg text-white">
+            <div class="bg-black bg-opacity-50">
+                <div class="container mx-auto px-4 lg:px-6 py-20 md:py-28 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4" id="hero-title">Industrial Hoses</h1>
+                    <p class="text-lg md:text-xl max-w-3xl mx-auto" id="hero-subtitle">Flexible and specialized hoses for suction, discharge, and transfer of various media.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="category-products" class="py-16 bg-white">
+            <div class="container mx-auto px-4 lg:px-6">
+                <nav class="text-sm mb-8" aria-label="Breadcrumb">
+                    <ol class="list-none p-0 inline-flex">
+                        <li class="flex items-center">
+                            <a href="index.html#products" class="text-blue-600 hover:underline">Products</a>
+                            <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
+                        </li>
+                        <li><span class="text-gray-500">Industrial Hoses</span></li>
+                    </ol>
+                </nav>
+
+                <h2 class="text-3xl font-bold text-gray-800 mb-4" id="products-title">Our Industrial Hose Assortment</h2>
+                <p class="text-gray-600 mb-12 max-w-3xl" id="products-subtitle">From custom hose assemblies to standard rubber and PVC hoses, we provide solutions for air, water, oil, chemicals, and abrasive materials, complete with all necessary couplings.</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <div class="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                       <img src="https://placehold.co/400x300/E0E0E0/333333?text=Hydraulic+Hose" alt="Hydraulic Hose" class="w-full h-48 object-cover">
+                       <div class="p-4 flex flex-col flex-grow">
+                           <h3 class="font-semibold text-lg text-gray-800">Hydraulic Hoses</h3>
+                           <p class="text-gray-600 mt-2 text-sm flex-grow">High-pressure hydraulic hoses for construction machinery, agricultural equipment, and industrial systems.</p>
+                           <a href="#" class="inline-block mt-4 bg-gray-200 text-gray-800 text-center px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-300">Learn More</a>
+                       </div>
+                    </div>
+                    <div class="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                       <img src="https://placehold.co/400x300/E0E0E0/333333?text=PVC+Suction+Hose" alt="PVC Suction Hose" class="w-full h-48 object-cover">
+                       <div class="p-4 flex flex-col flex-grow">
+                           <h3 class="font-semibold text-lg text-gray-800">PVC Suction Hoses</h3>
+                           <p class="text-gray-600 mt-2 text-sm flex-grow">Lightweight and flexible hoses with rigid PVC helix for water suction and discharge.</p>
+                           <a href="#" class="inline-block mt-4 bg-gray-200 text-gray-800 text-center px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-300">Learn More</a>
+                       </div>
+                    </div>
+                    <div class="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                       <img src="https://placehold.co/400x300/E0E0E0/333333?text=Food+Grade+Hose" alt="Food Grade Hose" class="w-full h-48 object-cover">
+                       <div class="p-4 flex flex-col flex-grow">
+                           <h3 class="font-semibold text-lg text-gray-800">Food Grade Hoses</h3>
+                           <p class="text-gray-600 mt-2 text-sm flex-grow">Certified hoses for the safe transfer of beverages, dairy products, and other foodstuffs.</p>
+                           <a href="#" class="inline-block mt-4 bg-gray-200 text-gray-800 text-center px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-300">Learn More</a>
+                       </div>
+                    </div>
+                    <div class="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                       <img src="https://placehold.co/400x300/E0E0E0/333333?text=Camlock+Couplings" alt="Camlock Couplings" class="w-full h-48 object-cover">
+                       <div class="p-4 flex flex-col flex-grow">
+                           <h3 class="font-semibold text-lg text-gray-800">Camlock Couplings</h3>
+                           <p class="text-gray-600 mt-2 text-sm flex-grow">Quick and simple hose couplings for a variety of fluids and applications. Available in multiple materials.</p>
+                           <a href="#" class="inline-block mt-4 bg-gray-200 text-gray-800 text-center px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-300">Learn More</a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white">
+        </footer>
+
+    <script>
+        // Copy Script from index.html
+    </script>
+</body>
+</html>
