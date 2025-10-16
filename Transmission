@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transmission - Dema Industrial Supply</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x800/003366/FFFFFF?text=Transmission');
+            background-size: cover;
+            background-position: center;
+        }
+        .lang-btn.active { background-color: #DBEAFE; color: #1E40AF; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center"><a href="index.html" class="text-3xl font-bold text-black">DEMA</a></div>
+                <div class="hidden lg:flex items-center space-x-6 text-gray-600 font-medium">
+                    <a href="index.html#products" class="hover:text-blue-600" id="nav-products">Products</a>
+                    <a href="#" class="hover:text-blue-600" id="nav-news">News & Promotions</a>
+                    <a href="#" class="hover:text-blue-600" id="nav-about">About Us</a>
+                    <a href="index.html#contact" class="hover:text-blue-600" id="nav-contact">Contact</a>
+                </div>
+                <div class="flex items-center">
+                     <div id="lang-switcher-desktop" class="hidden sm:flex items-center space-x-2 text-sm"><button data-lang="en" class="lang-btn px-3 py-1 rounded-md">EN</button><button data-lang="fr" class="lang-btn px-3 py-1 rounded-md hover:bg-gray-200">FR</button><button data-lang="nl" class="lang-btn px-3 py-1 rounded-md hover:bg-gray-200">NL</button></div>
+                    <button id="mobile-menu-button" class="lg:hidden ml-4 p-2 rounded-md text-gray-700 hover:bg-gray-200"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+                </div>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden lg:hidden px-4 pt-2 pb-4 space-y-2 bg-white border-t">
+            <a href="index.html#products" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100" id="mobile-nav-products">Products</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100" id="mobile-nav-news">News & Promotions</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100" id="mobile-nav-about">About Us</a>
+            <a href="index
